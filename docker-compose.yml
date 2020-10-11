@@ -4,6 +4,11 @@ volumes:
     name: "hadoop-distributed-file-system"
     driver: local
 services:
+  spark-client:
+    image: spark-client
+    container_name: spark-client
+    volumes:
+      - shared-workspace:/opt/workspace
   jupyterlab:
     image: jupyterlab
     container_name: jupyterlab

@@ -25,6 +25,10 @@ docker build \
   -t spark-worker .
 
 docker build \
+  -f spark-client.Dockerfile \
+  -t spark-client .
+
+docker build \
   --build-arg spark_version="${SPARK_VERSION}" \
   --build-arg jupyterlab_version="${JUPYTERLAB_VERSION}" \
   -f jupyterlab.Dockerfile \
